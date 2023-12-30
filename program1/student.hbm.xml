@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="student" table="student" schema="nskdb">
+ <id name="sid" type="java.lang.Integer">
+ <column name="sid"  />
+ <generator class="assigned" />
+ </id>
+ 
+ <property name="sname" type="java.lang.String">
+ <column name="sname" length="50" />
+ </property>
+ 
+ <property name="saddr" type="java.lang.String">
+ <column name="saddr" length="50" />
+ </property>
+ 
+ <property name="smob" type="java.lang.Integer">
+ <column name="smob" />
+ </property>
+ 
+ <property name="sfee" type="java.lang.Integer">
+ <column name="sfee" />
+ </property>
+ </class>
+</hibernate-mapping>
