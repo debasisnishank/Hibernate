@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="Employee2" table="Employee2" schema="nskdb">
+ <id name="empid" type="java.lang.Integer">
+ <column name="empid"  />
+ <generator class="assigned" />
+ </id>
+ 
+ <property name="empname" type="java.lang.String">
+ <column name="empname" length="50" />
+ </property>
+ 
+ <one-to-one name="personalDetail" class="PersonalDetail" />
+ 
+ 
+ </class>
+</hibernate-mapping>
