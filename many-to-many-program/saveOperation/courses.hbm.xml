@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="courses" table="courses" schema="nskdb">
+ <id name="cid" type="java.lang.Integer">
+ <column name="cid"  />
+ <generator class="increment" />
+ </id>
+ 
+ <property name="c_name" type="java.lang.String">
+ <column name="c_name" length="50" />
+ </property>
+ 
+  <property name="c_duration" type="java.lang.Integer">
+ <column name="c_duration"   />
+ </property>
+ 
+
+  <set  name="studentlist" cascade="save-update,delete" table="student_course">
+ <key column="cid" /> 
+
+ <many-to-many class="students" column="sid" />
+ 
+ </set>
+
+ </class>
+</hibernate-mapping>
