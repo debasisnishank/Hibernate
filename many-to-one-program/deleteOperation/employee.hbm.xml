@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+    
+          <hibernate-mapping>    
+          <class name="Employee" table="emp22">    
+          <id name="employeeId">    
+          <generator class="increment"></generator>    
+          </id>    
+          <property name="name" length="50"></property>    
+          <property name="email" length="50"></property>    
+              
+          <many-to-one name="address" cascade="all"></many-to-one>    
+          </class>    
+              
+          </hibernate-mapping>  
