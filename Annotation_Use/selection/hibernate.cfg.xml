@@ -5,16 +5,17 @@
 <hibernate-configuration>
 <session-factory>
 <property name="dialect">
-org.hibernate.dialect.SQLServerDialect
+org.hibernate.dialect.MySQLDialect
 </property>
 <property name="connection.url">
-jdbc:sqlserver://localhost;encrypt=true;databaseName=nsk;integratedSecurity=true;
+jdbc:mysql://localhost:3310/nskdb
 </property>
-<property name="connection.username">NSK/ASUS</property>
-<property name="connection.password">7487</property>
+<property name="connection.username">root</property>
+<property name="connection.password">root</property>
 <property name="connection.driver_class">
-org.hibernate.dialect.SQLServerDialect
+com.mysql.cj.jdbc.Driver
 </property>
-<mapping resource="./student.hbm.xml" />
+<mapping class="student" />
+
 </session-factory>
 </hibernate-configuration>
